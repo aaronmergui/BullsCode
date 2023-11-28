@@ -25,6 +25,7 @@ def game():
 
 if __name__ == "__game__":
     game()
+    print("Hello")
 
 
 
