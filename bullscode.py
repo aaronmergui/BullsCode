@@ -1,8 +1,15 @@
+import random
 
 
 class BullsCode:
-    def __init__(self, code):
-        self.code = code
+    def __init__(self, code=None):
+        if code is None:
+            self.code = ''
+            for i in range(4):
+                self.code += str(random.randint(0,9))
+
+        else:
+            self.code = code
 
     def check(self, bullcodes):
         count_b = 0
