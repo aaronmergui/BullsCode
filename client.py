@@ -1,7 +1,7 @@
 import socket
 from bullscode import BullsCode
 
-IP_ADRESS = "192.168.1.27"
+IP_ADRESS = "192.168.1.81"
 IP_LOCAL = "127.0.0.1"
 PORT = 2289
 
@@ -15,7 +15,7 @@ def game():
         my_socket.send(gess.encode())
         result = my_socket.recv(1024).decode()
         print("the server sent: " + result)
-        if (result == "BBBB"):
+        if (result == "[B, B, B, B]"):
             print("win")
             break
         if t == 9:

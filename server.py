@@ -18,9 +18,9 @@ def game():
     while t != 10:
         client_gess = client_socket.recv(1024).decode()
         result = random_answer.check(BullsCode(client_gess))
-        result = ''.join(result)
+        result = "["+', '.join(result)+"]"
         client_socket.send(result.encode())
-        if result == "BBBB":
+        if result == "[B, B, B, B]":
             print("player won ")
             break
         if t == 9:
